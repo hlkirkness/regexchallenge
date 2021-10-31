@@ -50,18 +50,26 @@ This quantifier tells us how many times the previous pattern matches. Often time
 OR Operator: |
 Code Snipet: `[a-f0-9]{6}|[a-f0-9]{3}`
 
+The | is a boolean that can match the expression before or after it. In the case of our regex, the | will match with a 3 or 6 character string containing a-f and/or 0-9.
+
 ### Character Classes
 
 Code Snipet: `a-f0-9`
+
+Character classes will match one our of several characters that were defined in the set. A hyphen can define a range of characters and more than one can be used, such as in our code.
 
 ### Grouping and Capturing
 
 Grouping and Capturing: ()
 Code Snipet: `([a-f0-9]{6}|[a-f0-9]{3})`
 
+The () groups the expression between them. This makes it so that multiple characters will appear as a single unit. This makes it so the data will be exposed as an array. 
+
 ### Bracket Expressions
 
 Code Snipet: `[a-f0-9]`
+
+Bracket expressions will match a specific pattern of characters defined within the brackets. A hyphen is used to show the range of characters (such as our a-f or 0-9).
 
 ### Greedy and Lazy Match
 
@@ -69,6 +77,8 @@ Code Snipet: `[a-f0-9]{6}`
 Code Snipet: `[a-f0-9]{3}`
 Quantifier: {}
 
+Greedy means matching the longest possible string, whereas lazy means matching the shortest possible string. Normal quantifiers are greedy but when you apply the ? quantifier, it would become lazy and will match as few occurances as possible.
+
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+My name is Heather Kirkness. I am a student learning different web technologies with a goal of becoming a full stack web developer. Here is the link to my [GitHub](https://github.com/hlkirkness)
