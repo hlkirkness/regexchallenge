@@ -14,13 +14,9 @@ The above regular expression is what we will be evaluating. It is used to match 
 - [Quantifiers](#quantifiers)
 - [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
 
@@ -47,25 +43,31 @@ Quantifier: {}
 Code Snipet: `[a-f0-9]{6}`
 Code Snipet: `[a-f0-9]{3}`
 
-This quantifier tells us how many times the previous pattern matches. Often times the quantifiers want the regex to match as many occurances of a particular pattern as possible. However, with the ? quantifier, the regex would match as few occurances as possible. In our regex, the quantifier is greedy.
+This quantifier tells us how many times the previous pattern matches. Often times the quantifiers want the regex to match as many occurances of a particular pattern as possible. However, with the ? quantifier, the regex would match as few occurances as possible. In our regex, the quantifier is greedy. The {6} in our regex implies that there are 6 instances of the string in the expression. This means the quantifier will allow 6 characters in the string that contain a-f and/or 0-9. The same would happen with a {3} but instead of 6 characters allowed, only 3 are.
 
 ### OR Operator
 
+OR Operator: |
+Code Snipet: `[a-f0-9]{6}|[a-f0-9]{3}`
+
 ### Character Classes
 
-### Flags
+Code Snipet: `a-f0-9`
 
 ### Grouping and Capturing
 
+Grouping and Capturing: ()
+Code Snipet: `([a-f0-9]{6}|[a-f0-9]{3})`
+
 ### Bracket Expressions
+
+Code Snipet: `[a-f0-9]`
 
 ### Greedy and Lazy Match
 
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
+Code Snipet: `[a-f0-9]{6}`
+Code Snipet: `[a-f0-9]{3}`
+Quantifier: {}
 
 ## Author
 
